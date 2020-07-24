@@ -5,17 +5,18 @@
 
     <transfer name="ProductOfferCriteriaFilter">
         <property name="idProductOffer" type="int"/>
-        <property name="idProductOffer" type="int"/>
     </transfer>
 
     <transfer name="ProductOffer">
         <property name="productOfferReference" type="string"/>
         <property name="prices" type="PriceProduct[]" singular="price"/>
-        <property name="productOfferReference" type="string"/>
-        <property name="prices" type="PriceProduct[]" singular="price"/>
     </transfer>
 
     <transfer name="PriceProduct">
+        <property name="moneyValue" type="MoneyValue"/>
+    </transfer>
+
+    <transfer name="MoneyValue">
     </transfer>
 
 </transfers>
