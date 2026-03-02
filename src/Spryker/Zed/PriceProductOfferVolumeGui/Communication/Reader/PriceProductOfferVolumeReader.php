@@ -33,9 +33,6 @@ class PriceProductOfferVolumeReader implements PriceProductOfferVolumeReaderInte
      */
     protected $utilEncodingService;
 
-    /**
-     * @param \Spryker\Zed\PriceProductOfferVolumeGui\Dependency\Service\PriceProductOfferVolumeGuiToUtilEncodingServiceInterface $utilEncodingService
-     */
     public function __construct(PriceProductOfferVolumeGuiToUtilEncodingServiceInterface $utilEncodingService)
     {
         $this->utilEncodingService = $utilEncodingService;
@@ -85,13 +82,6 @@ class PriceProductOfferVolumeReader implements PriceProductOfferVolumeReaderInte
         return $data;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MoneyValueTransfer $moneyValueTransfer
-     * @param string $storeName
-     * @param string $currencyCode
-     *
-     * @return bool
-     */
     protected function isMoneyValueTransferSatisfiedByParameters(
         MoneyValueTransfer $moneyValueTransfer,
         string $storeName,

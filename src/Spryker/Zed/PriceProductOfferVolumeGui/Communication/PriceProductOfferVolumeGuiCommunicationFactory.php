@@ -19,25 +19,16 @@ use Spryker\Zed\PriceProductOfferVolumeGui\PriceProductOfferVolumeGuiDependencyP
  */
 class PriceProductOfferVolumeGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\PriceProductOfferVolumeGui\Communication\Reader\PriceProductOfferVolumeReaderInterface
-     */
     public function createPriceProductOfferVolumeReader(): PriceProductOfferVolumeReaderInterface
     {
         return new PriceProductOfferVolumeReader($this->getUtilEncodingService());
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductOfferVolumeGui\Dependency\Facade\PriceProductOfferVolumeGuiToProductOfferFacadeInterface
-     */
     public function getProductOfferFacade(): PriceProductOfferVolumeGuiToProductOfferFacadeInterface
     {
         return $this->getProvidedDependency(PriceProductOfferVolumeGuiDependencyProvider::FACADE_PRODUCT_OFFER);
     }
 
-    /**
-     * @return \Spryker\Zed\PriceProductOfferVolumeGui\Dependency\Service\PriceProductOfferVolumeGuiToUtilEncodingServiceInterface
-     */
     public function getUtilEncodingService(): PriceProductOfferVolumeGuiToUtilEncodingServiceInterface
     {
         return $this->getProvidedDependency(PriceProductOfferVolumeGuiDependencyProvider::SERVICE_UTIL_ENCODING);
